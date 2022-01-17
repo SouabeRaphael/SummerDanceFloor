@@ -1,14 +1,18 @@
  body{
-    background-color: gray;
+    background-color: #808080;
 }
 
 .block{
-    height: 700px;
-    width: 900px;
-    border: 1px solid black;
-    background-color: white;
-    border-radius: 40px;
-    margin: auto;
-    margin-top: 50px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form1, .form2{
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
 }
 
