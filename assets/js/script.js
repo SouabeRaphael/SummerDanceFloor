@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     easing: "elastic.inout",
     repeat: 1,
   });
-  
-  bouncyCircle.play()
+
+  const mojsPlayer = new MojsPlayer({ add: bouncyCircle });
+  mojsPlayer.play();
 
 });
