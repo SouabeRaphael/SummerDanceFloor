@@ -89,14 +89,69 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   });
 
-
-
   // Plan 6
 
+  const circleBeforeBoum = new mojs.Shape({
+    shape:        'circle',
+    left:         '50%',
+    fill:         'none',
+    radius:       200,
+    stroke:       { 'rgba(255,255,255)' : 'rgba(255,255,255)' },
+    strokeWidth:  { 10: 10 },
+    delay:        16000,
+    duration:     500,
+    isShowEnd:  false,
 
+    // Plan 7
+
+  }).then({
+    scale: 2,
+    duration:     100,
+  }).then({
+    duration:     100,
+    scale: 1,
+
+    // Plan 8
+
+  }).then({
+    delay:        350,
+    duration:     100,
+    scale: 3,
+    
+  }).then({
+    duration:     100,
+    scale: 1,
+  });
+
+  const circleBeforeBoum2 = new mojs.Shape({
+    shape:        'circle',
+    left:         '50%',
+    fill:         'none',
+    radius:       180,
+    stroke:       { 'rgba(255,255,255)' : 'rgba(255,255,255)' },
+    strokeWidth:  { 5: 5 },
+    delay:        16000,
+    duration:     50,
+    isShowEnd:  false,
+
+  }).then({
+    scale: 1.5,
+    duration:     100,
+  }).then({
+    duration:     100,
+    scale: 1,
+  }).then({
+    delay:        350,
+    duration:     100,
+    scale: 2,
+    
+  }).then({
+    duration:     100,
+    scale: 1,
+  });
 
   const BLtimeline = new mojs.Timeline;
-  BLtimeline.add(lineInBegin1,lineInBegin2,arc1,arc2,firstcircle);
+  BLtimeline.add(lineInBegin1,lineInBegin2,arc1,arc2,firstcircle,circleBeforeBoum,circleBeforeBoum2);
 
   const mojsPlayer = new MojsPlayer({ add: BLtimeline});
   mojsPlayer.play();
