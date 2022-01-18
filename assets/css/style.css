@@ -1,5 +1,7 @@
  body{
-    background-color: gray;
+    background-color: rgb(222, 222, 222);
+    height: 2000px;
+    width: 2000px;
 }
 
 .block{
