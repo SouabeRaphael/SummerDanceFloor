@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     fill:         { '#FFFFFF' : '#FFFFFF'},
     radius:       10,
     rx:           3,
-    x:            { 750 : -27},
+    x:            { 750 : -33},
     y:            { [-200] : -200},
     scaleX:       { [-0] : -5},
     scaleY:       { 0.5 : 0.5},
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     strokeDasharray: '100%',
     strokeDashoffset: { '-100%' : '-50%' },
     rotate:        { [-90]: -90 },
-    delay:        2500,
+    delay:        3400,
     duration:     3000,
     isShowEnd:  false,
   });
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     strokeDasharray: '100%',
     strokeDashoffset: { '-100%' : '-50%' },
     rotate:        { [-270]: -270 },
-    delay:        2500,
+    delay:        3400,
     duration:     3000,
     isShowEnd:  false,
   });
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     stroke:       { 'rgba(255,255,255)' : 'rgba(255,255,255)' },
     strokeWidth:  { 10: 10 },
     
-    delay:        6500,
+    delay:        6400,
     duration:     1000,
     isShowEnd:  false,
 
