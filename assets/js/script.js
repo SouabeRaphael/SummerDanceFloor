@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     strokeDasharray: '100%',
     strokeDashoffset: { '-100%' : '-50%' },
     rotate:        { [-270]: -270 },
-    delay:        2s500,
+    delay:        2500,
     duration:     3000,
     isShowEnd:  false,
   });
@@ -92,26 +92,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
   // Plan 6
-
-  const firstcircle = new mojs.Shape({
-    shape:        'circle',
-    left:         '50%',
-    fill:         'none',
-    radius:       200,
-    stroke:       { 'rgba(255,255,255)' : 'rgba(255,255,255)' },
-    strokeWidth:  { 10: 10 },
-    
-    delay:        6500,
-    duration:     1000,
-    isShowEnd:  false,
-
-  });
-
-
-
-
-
-
 
 
 
