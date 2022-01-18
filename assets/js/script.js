@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', (event) => {
+
   console.log('DOM fully loaded and parsed');
 
   /* -------------------------- */
@@ -312,6 +313,163 @@ yes.add(
     add: postDrop
   });
   
+=======
+  
+  // Plan 1
+  const lineInBegin1 = new mojs.Shape({
+    shape:        'rect',
+    fill:         { '#FFFFFF' : '#FFFFFF'},
+    radius:       10,
+    rx:           3,
+    x:            { [-750] : 12},
+    y:            { 200 : 200},
+    scaleX:       { 0 : 5},
+    scaleY:       { 0.5 : 0.5},
+    origin:       { '0 50%' : '100% 50%'},
+
+
+    delay:        0,
+    duration:     4000,
+    isShowEnd:  false,
+  }).then({
+    scaleX:       { 5 : 0},
+    duration:     1000,
+  });
+
+  const lineInBegin2 = new mojs.Shape({
+    shape:        'rect',
+    fill:         { '#FFFFFF' : '#FFFFFF'},
+    radius:       10,
+    rx:           3,
+    x:            { 750 : -33},
+    y:            { [-200] : -200},
+    scaleX:       { [-0] : -5},
+    scaleY:       { 0.5 : 0.5},
+    origin:       { '0 50%' : '100% 50%'},
+
+
+    delay:        0,
+    duration:     4000,
+    isShowEnd:  false,
+  }).then({
+    scaleX:       { [-5] : 0},
+    duration:     1000,
+  });
+
+  // Plan 2
+
+  const arc1 = new mojs.Shape({
+    shape:        'circle',
+    left:         '50%',
+    fill:         'none',
+    radius:       200,
+    stroke:       { 'rgba(255,255,255)' : 'rgba(255,255,255)' },
+    strokeWidth:  { 10: 10 },
+    strokeDasharray: '100%',
+    strokeDashoffset: { '-100%' : '-50%' },
+    rotate:        { [-90]: -90 },
+    delay:        3400,
+    duration:     3000,
+    isShowEnd:  false,
+  });
+
+  const arc2 = new mojs.Shape({
+    shape:        'circle',
+    left:         '50%',
+    fill:         'none',
+    radius:       200,
+    stroke:       { 'rgba(255,255,255)' : 'rgba(255,255,255)' },
+    strokeWidth:  { 10: 10 },
+    strokeDasharray: '100%',
+    strokeDashoffset: { '-100%' : '-50%' },
+    rotate:        { [-270]: -270 },
+    delay:        3400,
+    duration:     3000,
+    isShowEnd:  false,
+  });
+
+  // Plan 3
+
+  const firstcircle = new mojs.Shape({
+    shape:        'circle',
+    left:         '50%',
+    fill:         'none',
+    radius:       200,
+    stroke:       { 'rgba(255,255,255)' : 'rgba(255,255,255)' },
+    strokeWidth:  { 10: 10 },
+    
+    delay:        6400,
+    duration:     1000,
+    isShowEnd:  false,
+
+  });
+
+  // Plan 6
+
+  const circleBeforeBoum = new mojs.Shape({
+    shape:        'circle',
+    left:         '50%',
+    fill:         'none',
+    radius:       200,
+    stroke:       { 'rgba(255,255,255)' : 'rgba(255,255,255)' },
+    strokeWidth:  { 10: 10 },
+    delay:        16000,
+    duration:     500,
+    isShowEnd:  false,
+
+    // Plan 7
+
+  }).then({
+    scale: 2,
+    duration:     100,
+  }).then({
+    duration:     100,
+    scale: 1,
+
+    // Plan 8
+
+  }).then({
+    delay:        350,
+    duration:     100,
+    scale: 3,
+    
+  }).then({
+    duration:     100,
+    scale: 1,
+  });
+
+  const circleBeforeBoum2 = new mojs.Shape({
+    shape:        'circle',
+    left:         '50%',
+    fill:         'none',
+    radius:       180,
+    stroke:       { 'rgba(255,255,255)' : 'rgba(255,255,255)' },
+    strokeWidth:  { 5: 5 },
+    delay:        16000,
+    duration:     50,
+    isShowEnd:  false,
+
+  }).then({
+    scale: 1.5,
+    duration:     100,
+  }).then({
+    duration:     100,
+    scale: 1,
+  }).then({
+    delay:        350,
+    duration:     100,
+    scale: 2,
+    
+  }).then({
+    duration:     100,
+    scale: 1,
+  });
+
+  const BLtimeline = new mojs.Timeline;
+  BLtimeline.add(lineInBegin1,lineInBegin2,arc1,arc2,firstcircle,circleBeforeBoum,circleBeforeBoum2);
+
+  const mojsPlayer = new MojsPlayer({ add: BLtimeline});
+
   mojsPlayer.play();
 
 });
