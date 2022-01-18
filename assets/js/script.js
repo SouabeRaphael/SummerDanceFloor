@@ -11,7 +11,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
     isShowStart: true,
     easing: "elastic.inout",
     repeat: 1,
+  }).then({
+    fill: { "#0000FF": "#0FF0FF" },
+  }).then({
+    fill: { "#0000FF": "#0FF0FF" },
+    duration: 10000,
   });
+
+  
 
   const mojsPlayer = new MojsPlayer({ add: bouncyCircle });
   mojsPlayer.play();
